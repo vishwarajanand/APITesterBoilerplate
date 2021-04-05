@@ -16,7 +16,12 @@ class APITests(unittest.TestCase):
 
 
     # check for data
-
+    def test_posts_data_returned(self):
+        response = requests.get(URL)
+        sample_json_response_file = open('db.json',)
+        sample_json_response = json.load(sample_json_response_file)
+        assert response.json() == sample_json_response['posts']
+        sample_json_response_file.close()
 
 if __name__ == "__main__":
     unittest.main()

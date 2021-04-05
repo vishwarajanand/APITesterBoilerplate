@@ -27,7 +27,7 @@ json-server db.json
 #### STEP-3 How to run python unit tests
 
 ```
-python APITests.py
+python -m APITests -v
 # Or debug APITests.py from vscode
 ```
 
